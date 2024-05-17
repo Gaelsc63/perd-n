@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perdón</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yesButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #noButton {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Me perdonas por no contestar?</h1>
+    <div>
+        <button id="yesButton" onclick="forgive()">Sí</button>
+        <button id="noButton">No</button>
+    </div>
+
+    <script>
+        function forgive() {
+            alert("¡Gracias por perdonarme!");
+            window.close();
+        }
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            alert("Oh, está bien. Espero puedas perdonarme pronto.");
+        });
+    </script>
+</body>
+</html>
