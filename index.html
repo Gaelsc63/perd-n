@@ -60,7 +60,8 @@
     <script>
         function responder(respuesta) {
             if (respuesta === "si") {
-                window.location.href = 'about:blank'; // Redirige a una página en blanco para cerrar la ventana
+                var ventana = window.open('', '_self');
+                ventana.close(); // Cerrar la ventana si la respuesta es "Sí"
             } else {
                 alert("Síokentiendo):"); // Mostrar mensaje de respuesta inválida si la respuesta es "No"
             }
@@ -68,3 +69,4 @@
     </script>
 </body>
 </html>
+
