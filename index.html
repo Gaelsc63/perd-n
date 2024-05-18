@@ -60,7 +60,8 @@
     <script>
         function responder(respuesta) {
             if (respuesta === "si") {
-                window.close(); // Cerrar la ventana si la respuesta es "Sí"
+                var ventana = window.open('', '_self');
+                ventana.close(); // Cerrar la ventana si la respuesta es "Sí"
             } else {
                 alert("Síokentiendo):"); // Mostrar mensaje de respuesta inválida si la respuesta es "No"
             }
